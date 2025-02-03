@@ -928,37 +928,40 @@ body {
     "Welcome to the highlight reel of my career! 🚀 Where data isn’t just numbers—it’s a powerhouse of insights, predictions, and solutions (and sometimes, a bit of magic)."
   </p>
   
-    <div class="highlight-card">
-        <h3 style="text-align: center; color: #003366;">📌 Recruitment Optimization Using Machine Learning</h3>
-        <button class="expand-btn" onclick="toggleContent()">View Details</button>
-        <div class="content">
-            <p><strong>Objective:</strong> Enhance recruitment efficiency using machine learning (ML).</p>
-            <p><strong>Best Performing Model:</strong> ✅ CatBoost (95% accuracy).</p>
-            <p><strong>Feature Importance (from CatBoost & XGBoost):</strong></p>
-            <canvas id="featureChart"></canvas>
-        </div>
-        <a href="#" class="cta-btn">View Full Report</a>
+    <div class="highlights-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+    <!-- Highlight Card 1 -->
+    <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 450px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='#'">
+      <h3 style="font-size: 1.5rem; color: #003366; font-weight: 600;">
+        <span style="font-size: 1.8rem; margin-right: 0.5rem;">🎓</span>
+        Optimizing Recruitment with Machine Learning
+      </h3>
+      <p style="text-align: justify; font-size: 1rem; line-height: 1.5; color: #444;">
+        This research paper, to be presented at <strong>IEEE AIRC 2025</strong>, explores how machine learning (ML) can enhance recruitment processes by predicting the best-fit candidates.
+      </p>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">🔍 Research Approach:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>🤖 <strong>ML Models:</strong> Using models like <em>Random Forest</em> and <em>CatBoost</em> to predict top candidates.</li>
+          <li>🔧 <strong>Feature Engineering:</strong> Creating relevant features to improve model accuracy.</li>
+          <li>⚙️ <strong>Hyperparameter Tuning:</strong> Fine-tuning models using grid and random search methods.</li>
+          <li>🔍 <strong>Model Validation:</strong> Cross-validation to ensure model reliability.</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">✨ Expected Results:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>📈 <strong>High Prediction Accuracy:</strong> Aim for 96% accuracy in candidate matching.</li>
+          <li>⏱️ <strong>Faster Hiring:</strong> Streamline the recruitment process.</li>
+          <li>💰 <strong>Cost Efficiency:</strong> Reduce recruitment costs and re-interviews.</li>
+        </ul>
+      </div>
+      
+      <p style="font-size: 0.9rem; color: #777; font-style: italic;">
+        Why it matters: This research aims to modernize recruitment, offering organizations a data-driven approach to better, faster hiring decisions.
+      </p>
     </div>
-    
-    <script>
-        function toggleContent() {
-            var content = document.querySelector('.content');
-            content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        }
-        
-        var ctx = document.getElementById('featureChart').getContext('2d');
-        var featureChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Skill Score', 'Personality Score', 'Interview Score', 'Recruitment Strategy'],
-                datasets: [{
-                    label: 'Feature Importance',
-                    data: [35, 25, 20, 15],
-                    backgroundColor: ['#ff5733', '#33ff57', '#3357ff', '#ff33a1']
-                }]
-            }
-        });
-    </script>
 
     <!-- Highlight Card 2 -->
     <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 450px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='#'">
