@@ -737,23 +737,22 @@ body {
   </style>
 </head>
 <body>
-  <header>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
     <div class="logo">
-      <h1>Welcome to My Portfolio, Tech Savys!!!!</h1>
-      <p style="text-align: center;">
+      <h1 style="margin: 0; white-space: nowrap; padding: 30px 60px;">Welcome to My Portfolio Tech Savys!!!!</h1>
     </div>
     <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#career-highlights">Career Highlights</a></li>
-        <li><a href="#certifications">Certifications</a></li>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+        <li style="margin-right: 20px;"><a href="#about">About Me</a></li>
+        <li style="margin-right: 20px;"><a href="#experience">Experience</a></li>
+        <li style="margin-right: 20px;"><a href="#skills">Skills</a></li>
+        <li style="margin-right: 20px;"><a href="#career-highlights">Career Highlights</a></li>
+        <li style="margin-right: 20px;"><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section id="about">
+  <section id="about" style="background: linear-gradient(135deg, #f6511d, #ffb400, #00a6ed, #7fb800, #0d2c54); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
     <!-- Profile Image -->
     <img src="harika_image.jpg" alt="Harika Yenuga" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
     
@@ -830,8 +829,9 @@ body {
         <!-- Card 3 -->
         <div class="experience-card transform hover:-translate-y-2 transition duration-300 shadow-lg rounded-xl bg-white p-6">
           <i class="fas fa-globe text-indigo-500 text-4xl mb-4"></i>
-                          <img src="https://www.rsisoftech.com/wp-content/uploads/2021/05/cropped-RSI-Softech-1.png" alt="RSI Softech Logo" class="logo">
-          <h3 class="text-xl font-bold text-gray-800">RSI Softech</h3>
+    <img src="https://static.wixstatic.com/media/7988d4_9f22df670f40424883d8c02b3346900d~mv2.png/v1/crop/x_0,y_7,w_408,h_84/fill/w_335,h_69,al_c,usm_0.66_1.00_0.01/RSIPL_Smallest.png" 
+         alt="RSI Softech Logo" class="logo">
+      <h3 class="text-xl font-bold text-gray-800">RSI Softech</h3>
           <h4 class="text-lg text-gray-500">GIS Engineer (Jan 2019 – Sep 2019)</h4>
           <ul class="mt-4 text-left text-gray-600">
             <li><i class="fas fa-building icon-small"></i>Developed and validated <span class="highlight">large datasets</span> to support urban planning initiatives, ensuring data consistency and accuracy for strategic analysis.</li>
@@ -843,12 +843,11 @@ body {
       </div>
     </div>
   </section>  
-<style>
   #experience p {
     color: #333; /* Darker text for better contrast */
     font-size: 1.125rem;
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: justify; /* Justifies text inside the paragraph */
   }
 
   #experience {
@@ -894,54 +893,65 @@ body {
   .experience-card ul {
     list-style-type: none;
     padding: 0;
+    text-align: justify; /* Justifies text inside lists */
   }
 
   .experience-card ul li {
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
     color: #495057; /* Neutral dark gray for list items */
+    text-align: justify; /* Ensures list items are justified */
   }
 
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-right: 15px;
-        }
-        .company-details {
-            display: flex;
-            align-items: center;
-        }
-        .company {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #2A7CC2;
-            margin-right: 10px;
-        }
-        .position {
-            font-style: italic;
-            color: #333;
-        }
-        .date {
-            color: #666;
-            font-size: 0.9em;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-        .icon {
-            margin-right: 10px;
-            color: #2A7CC2;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #d74e09;
-        }
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+  }
+
+  .company-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .company {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #2A7CC2;
+    margin-right: 10px;
+  }
+
+  .position {
+    font-style: italic;
+    color: #333;
+  }
+
+  .date {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    text-align: justify; /* Ensures text inside list items is justified */
+  }
+
+  .icon {
+    margin-right: 10px;
+    color: #2A7CC2;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #d74e09;
+  }
 
   @media (max-width: 768px) {
     .experience-card ul li {
@@ -970,7 +980,7 @@ body {
       grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     }
   }
-</style>
+
 <section id="career-highlights" style="padding: 2rem; background-color: #f4f7fb;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: #333;">CAREER HIGHLIGHTS</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-bottom: 2rem;">
