@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harika Yenuga's Portfolio</title>
-  <style>
+   <style>
     * {
       margin: 0;
       padding: 0;
@@ -20,11 +20,11 @@
 
     header {
       background-color: #112c6e;
-color: rgb(247, 240, 240);
+      color: rgb(247, 240, 240);
       padding: 20px 0;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: left;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -181,7 +181,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #b4acac;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -191,7 +191,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 30px;
 }
 
@@ -249,7 +249,7 @@ body {
 .card {
   width: 100%;
   max-width: 900px;
-  background-color: #ebe9f7;
+  background-color: #c3bedd;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(248, 245, 245, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -266,7 +266,7 @@ body {
 
 /* About Me Section */
 .about-me-section {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about-heading {
@@ -297,7 +297,7 @@ body {
 
 /* Button Styling */
 .cta-button {
-  padding: 10px 20px;
+  padding: 20px 20px;
   background-color: #2980b9;
   color: #fff;
   font-size: 1.1rem;
@@ -314,7 +314,7 @@ body {
 
 .cta-button:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
+  box-shadow: 0 0 5px rgba(224, 231, 236, 0.8);
 }
 
 /* Smooth Scrolling */
@@ -396,7 +396,7 @@ body {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #123252; /* Darker color for the header */
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7); /* Glowing effect */
+  text-shadow: 0 0 10px rgba(188, 245, 245, 0.7), 0 0 20px rgba(65, 90, 90, 0.7), 0 0 30px rgba(0, 255, 255, 0.7); /* Glowing effect */
   animation: glowingText 1.5s infinite alternate; /* Animated glow effect on text */
 }
 
@@ -427,42 +427,6 @@ body {
   box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 35px rgba(0, 255, 255, 0.8); /* Glowing effect on hover */
 }
 
-/* Achievements Section */
-.achievements {
-  margin-top: 20px;
-}
-
-.achievement {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  opacity: 0; /* Start with achievements invisible */
-  animation: fadeInUp 0.8s ease-out forwards; /* Achievement fade-in animation */
-  transition: opacity 0.3s ease-in-out;
-}
-
-.icon {
-  font-size: 1.5rem;
-  margin-right: 15px;
-}
-
-.achievement p {
-  font-size: 1rem;
-  color: #34495e;
-}
-
-.achievement strong {
-  font-weight: bold;
-}
-
-/* Job Card Animation (fade in and slide up) */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Glowing Text Animation */
 @keyframes glowingText {
   0% {
@@ -483,258 +447,14 @@ body {
   }
 }
 
-/* Odd and Even Job Cards with light colors */
-.job-card:nth-child(odd) {
-  background-color: #f9f9f9; /* Light gray for odd jobs */
-}
-
-.job-card:nth-child(even) {
-  background-color: #fafafa; /* Slightly different light gray for even jobs */
-}
-
-/* Mobile Optimization */
+/* Mobile Optimization */ 
 @media (max-width: 768px) {
-  #experience {
-    padding: 40px 20px;
-  }
-
-  .experience-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .job-card {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  #experience h2 {
-    font-size: 2rem;
-  }
-
   .job-card {
     width: 100%;
-    padding: 15px;
-  }
-
-  .job-header h3 {
-    font-size: 1.6rem;
-  }
-
-  .achievement p {
-    font-size: 0.9rem;
   }
 }
-
-  /* Career Highlights Section */
-  #career-highlights {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-    border-radius: 12px;
-    margin: 50px auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  #career-highlights h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #2c3e50;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Highlights Container */
-  .highlights-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  /* Highlight Card */
-  .highlight-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 25px;
-    width: calc(45% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Alternating Background Colors */
-  .highlight-card:nth-child(odd) {
-    background-color: #e9f7fe;
-  }
-  
-  .highlight-card:nth-child(even) {
-    background-color: #fdf7e9;
-  }
-  
-  /* Hover Effects */
-  .highlight-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Card Title */
-  .highlight-card h3 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-    color: #2c3e50;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  /* Icons */
-  .icon {
-    font-size: 1.5em;
-    color: #2980b9;
-  }
-  
-  /* Subheading in Card */
-  .highlight-card h4 {
-    font-size: 1.1em;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: #34495e;
-    font-weight: 600;
-  }
-  
-  /* List Styling */
-  .highlight-card ul {
-    padding-left: 20px;
-  }
-  
-  .highlight-card ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #2c3e50;
-  }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 800px) {
-    .highlight-card {
-      width: 100%;
-    }
-  
-    #career-highlights h2 {
-      font-size: 2em;
-    }
-  
-    .highlight-card h3 {
-      font-size: 1.4em;
-    }
-  
-    .highlight-card h4 {
-      font-size: 1em;
-    }
-  }
-    </style>
-  <!-- Add Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<!-- Optional CSS for hover effect -->
-<style>
-    .skill-box {
-        position: relative;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-
-    .skill-box i {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        color: rgb(89, 79, 228);
-    }
-
-    .skill-box:hover {
-        transform: scale(1.05);
-    }
-
-    .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .skills-container .skill-box {
-        width: 22%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .skill-box h3 {
-        font-size: 1.2rem;
-        color: white;
-        margin: 10px 0;
-    }
-
-    .skill-box ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .skill-box ul li {
-        color: rgb(12, 0, 0);
-        font-size: 1rem;
-        margin: 5px 0;
-    }
-
-    
-
-    form input:focus, form textarea:focus {
-      border-color: #f3c984;
-    }
-
-    form button {
-      padding: 12px 20px;
-      background-color: #6283d4;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    form button:hover {
-      background-color: #f39c12;
-      transform: translateY(-3px);
-    }
-
-    .socials a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2e3a59;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-
-    .socials a:hover {
-      color: #f39c12;
-    }
-
-    footer {
-      background-color: #2e3a59;
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
-    
-    footer p {
-      font-size: 1rem;
-    }
   </style>
+</head>
 </head>
 <body>
   <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
