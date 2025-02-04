@@ -675,13 +675,14 @@ body {
   </style>
 </section>
 
-<section id="career-highlights" style="padding: 2rem; background-color: #f4f7fb;">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: #333;">CAREER HIGHLIGHTS</h2>
+
+<section id="career-highlights" style="padding: 4rem; background: linear-gradient(135deg, #b3c2d4, #a772a4, #cfd9df, #a6c0fe); border-radius: 10px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: #1d0202;">CAREER HIGHLIGHTS</h2>
   <p style="text-align: center; font-size: 1rem; color: #555; margin-bottom: 2rem;">
     "Welcome to the highlight reel of my career! 🚀 Where data isn’t just numbers—it’s a powerhouse of insights, predictions, and solutions (and sometimes, a bit of magic)."
   </p>
   
-    <div class="highlights-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+  <div class="highlights-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
     <!-- Highlight Card 1 -->
     <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 450px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='#'">
       <h3 style="font-size: 1.5rem; color: #003366; font-weight: 600;">
@@ -784,107 +785,161 @@ body {
       .highlight-card {
         flex: 1 1 100%;
         max-width: 100%;
+        padding: 1.5rem;
       }
       h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
-      .highlight-card p {
-        font-size: 0.9rem;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+  <style>
+    @media only screen and (max-width: 768px) {
+      .highlight-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 1.5rem;
       }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
   </style>
 </section>
 <section>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills Showcase</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-      /* General Styling */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-  
-      h1, h2 {
-        text-align: center;
-        margin: 20px 0;
-      }
-  
-      /* Section Styling */
-      #skills {
-        padding: 40px;
-        background-color: #fff;
-      }
-  
-      .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-      }
-  
-      /* Skill Box Styling */
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e9eff6; /* Lighter background for contrast */
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Section Styling */
+    #skills {
+      padding: 60px 0;
+      background-color: #f2f4f8; /* Subtle light gray background */
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Skill Box Styling */
+    .skill-box {
+      background: linear-gradient(135deg, #5c6bc0, #3f51b5); /* New gradient for the skill box */
+      color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .skill-box h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .skill-box ul {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .skill-box ul li {
+      margin: 5px 0;
+    }
+
+    .skill-box ul li i {
+      margin-right: 8px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
       .skill-box {
-        background: linear-gradient(135deg, #9eaaf1, #afb7e2);
-        color: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
+        width: 100%;
       }
-  
-      .skill-box:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Gradient and Glow Styles for Interactive Heading */
+    #interactive-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #1dd1a1, #5f27cd);
+      -webkit-background-clip: text;
+      background-clip: text; /* Standard property */
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%;
+      animation: gradientAnimation 3s linear infinite;
+      transition: text-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    #interactive-heading:hover {
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      transform: scale(1.05);
+    }
+
+    /* Gradient Animation */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
       }
-  
-      .skill-icon {
-        font-size: 36px;
-        margin-bottom: 15px;
+      50% {
+        background-position: 100% 50%;
       }
-  
-      .skill-box h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        font-weight: bold;
+      100% {
+        background-position: 0% 50%;
       }
-  
-      .skill-box ul {
-        list-style: none;
-        padding: 0;
-        font-size: 16px;
-      }
-  
-      .skill-box ul li {
-        margin: 5px 0;
-      }
-  
-      .skill-box ul li i {
-        margin-right: 8px;
-      }
-  
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .skill-box {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section id="skills">
-      <section style="padding: 20px; text-align: center;">
-        <h2 id="interactive-heading" style="cursor: pointer; margin-bottom: 20px;"></h2>
-        
+    }
+
+    /* Scrollable Skills Section */
+    #cards-container {
+      height: 400px;
+      overflow-y: auto;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+  </style>
+
+  <section id="skills">
+    <section style="padding: 20px; text-align: center;">
+      <h2 id="interactive-heading" style="cursor: pointer; margin-bottom: 20px;"></h2>
+    
       <div class="skills-container">
         <!-- Business Intelligence -->
         <div class="skill-box">
@@ -897,7 +952,7 @@ body {
             <li><i class="fas fa-chart-pie"></i> Data Visualization</li>
           </ul>
         </div>
-  
+
         <!-- Data Analysis & Visualization -->
         <div class="skill-box">
           <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
@@ -908,7 +963,7 @@ body {
             <li><i class="fas fa-chart-bar"></i> Excel (Pivot Tables)</li>
           </ul>
         </div>
-  
+
         <!-- Data Governance -->
         <div class="skill-box">
           <div class="skill-icon"><i class="fas fa-lock"></i></div>
@@ -919,7 +974,7 @@ body {
             <li><i class="fas fa-cogs"></i> Data Quality Assurance</li>
           </ul>
         </div>
-  
+
         <!-- Databases -->
         <div class="skill-box">
           <div class="skill-icon"><i class="fas fa-server"></i></div>
@@ -930,7 +985,7 @@ body {
             <li><i class="fas fa-database"></i> PostgreSQL</li>
           </ul>
         </div>
-  
+
         <!-- ETL -->
         <div class="skill-box">
           <div class="skill-icon"><i class="fas fa-plug"></i></div>
@@ -941,7 +996,7 @@ body {
             <li><i class="fas fa-cogs"></i> Talend</li>
           </ul>
         </div>
-  
+
         <!-- GIS Tools -->
         <div class="skill-box">
           <div class="skill-icon"><i class="fas fa-globe-americas"></i></div>
@@ -952,169 +1007,56 @@ body {
             <li><i class="fas fa-tasks"></i> GeoPandas</li>
           </ul>
         </div>
-        <style>
-          #skills {
-  padding: 60px 0;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.skill {
-  margin: 20px 0;
-}
-
-.skill-name {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.progress-bar {
-  width: 0;
-  height: 20px;
-  background-color: #3498db;
-  border-radius: 10px;
-  transition: width 2s ease-out;
-}
-
-.skill:nth-child(odd) .progress-bar {
-  background-color: #e74c3c;
-}
-
-.skill:nth-child(even) .progress-bar {
-  background-color: #2ecc71;
-}
-</style>
-<script>
-// Intersection Observer to trigger animation when skills come into view
-const skills = document.querySelectorAll('.progress-bar');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const progress = entry.target;
-      progress.style.width = progress.getAttribute('data-progress') + '%';
-    }
-  });
-}, { threshold: 0.5 });
-
-skills.forEach(skill => observer.observe(skill));
-</script>
-        </style>
-      </section>
-      <section id="skills">
-        <style>
-          /* General Styles */
-          body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(90deg, #feca57);
-            color: #333;
-          }
-  
-          h1, h2 {
-            text-align: center;
-            margin: 20px 0;
-          }                   
-
-          /* Gradient and Glow Styles */
-          #interactive-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-
-  background: linear-gradient(90deg, #ff6b6b, #feca57, #1dd1a1, #5f27cd);
-  -webkit-background-clip: text;
-  background-clip: text; /* Standard property */
-  -webkit-text-fill-color: transparent;
-  background-size: 300% 300%;
-  animation: gradientAnimation 3s linear infinite;
-  transition: text-shadow 0.3s ease, transform 0.3s ease;
-}
-        
-          #interactive-heading:hover {
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-            transform: scale(1.05);
-          }
-        
-          /* Gradient Animation */
-          @keyframes gradientAnimation {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        
-          /* Skills Section Styling */
-          #cards-container {
-            height: 400px; /* Adjust as needed for the height of your skills section */
-            overflow-y: auto; /* Enables vertical scrolling */
-            padding: 20px;
-            margin-top: 50px;
-          }
-        
-          /* Optional styles for skill-boxes */
-          .skill-box {
-            /* Your custom styles here */
-          }
-        </style>
-        
-        <script>
-          // Dynamic Typing Effect
-          const headingText = "Explore My Skills Below! ⬇️";
-          const headingElement = document.getElementById("interactive-heading");
-          let i = 0;
-        
-          function typeEffect() {
-            if (i < headingText.length) {
-              headingElement.innerHTML += headingText.charAt(i);
-              i++;
-              setTimeout(typeEffect, 100); // Adjust speed here
-            }
-          }
-        
-          // Smooth Scroll to Cards
-          headingElement.addEventListener("click", () => {
-            document.getElementById("cards-container").scrollIntoView({ behavior: "smooth" });
-          });
-        
-          // Start Typing Effect
-          typeEffect();
-        
-          // Auto Scroll Functionality for Skills Section
-          function autoScroll() {
-            const skillsSection = document.getElementById("cards-container");
-        
-            // Check if there is content to scroll
-            if (skillsSection.scrollHeight > skillsSection.clientHeight) {
-              // Scroll the skills section by 1px vertically
-              skillsSection.scrollBy(0, 1); 
-        
-              // Continue auto-scrolling at a set interval
-              setTimeout(autoScroll, 10); // Adjust the delay for smooth scrolling speed
-            }
-          }
-        
-          // Start auto-scrolling for skills section when the page loads
-          window.onload = () => {
-            autoScroll(); // Start auto-scrolling for the skills section
-          };
-        
-          // Optional: Add cursor interaction
-          document.querySelectorAll('.skill-box').forEach(box => {
-            box.addEventListener('mouseover', () => {
-              box.style.cursor = 'pointer';
-            });
-          });
-          
-        </script>
-        
+      </div>
+    </section>
   </section>
+
+  <script>
+    // Dynamic Typing Effect
+    const headingText = "Explore My Skills Below! ⬇️";
+    const headingElement = document.getElementById("interactive-heading");
+    let i = 0;
+
+    function typeEffect() {
+      if (i < headingText.length) {
+        headingElement.innerHTML += headingText.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100); // Adjust speed here
+      }
+    }
+
+    // Smooth Scroll to Cards
+    headingElement.addEventListener("click", () => {
+      document.getElementById("cards-container").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Start Typing Effect
+    typeEffect();
+
+    // Auto Scroll Functionality for Skills Section
+    function autoScroll() {
+      const skillsSection = document.getElementById("cards-container");
+
+      if (skillsSection.scrollHeight > skillsSection.clientHeight) {
+        skillsSection.scrollBy(0, 1); 
+        setTimeout(autoScroll, 10); // Adjust the delay for smooth scrolling speed
+      }
+    }
+
+    window.onload = () => {
+      autoScroll(); // Start auto-scrolling for the skills section
+    };
+
+    // Optional: Add cursor interaction
+    document.querySelectorAll('.skill-box').forEach(box => {
+      box.addEventListener('mouseover', () => {
+        box.style.cursor = 'pointer';
+      });
+    });
+
+  </script>
+</section>
+
 <section>
     <!-- Certifications Section -->     
     <h2>My Certifications</h2>
