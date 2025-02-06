@@ -472,44 +472,44 @@ body {
       </ul>
     </nav>
   </header>
-  <section id="about-me-features" class="about-section relative">
+  <section id="about-me-features" class="about-section">
     <div class="profile-container">
-        <img src="harika_image.jpg" alt="Harika Yenuga" class="profile-img animate-float">
+        <img src="harika_image.jpg" alt="Harika Yenuga" class="profile-img">
         <h2 class="typing-text">👋 Hi, I'm <span id="typing"></span></h2>
     </div>
 
     <!-- Dots and Lines Background -->
     <div class="background-pattern">
-        <div class="dots animate-dots"></div>
-        <div class="lines animate-lines"></div>
+        <div class="dots"></div>
+        <div class="lines"></div>
     </div>
 
     <div class="features-container">
-        <div class="feature animate-fade-up">
+        <div class="feature">
             <div class="icon">📊</div>
             <div class="content">
                 <h3>Data-Driven Storyteller</h3>
-                <p>I specialize in uncovering actionable insights through data visualization, transforming complex numbers into meaningful business strategies with a touch of magic.</p>
+                <p>I specialize in uncovering actionable insights through data visualization, transforming complex numbers into meaningful business strategies.</p>
             </div>
         </div>
-
-        <div class="feature animate-fade-up" style="animation-delay: 0.2s">
+        
+        <div class="feature">
             <div class="icon">🤖</div>
             <div class="content">
                 <h3>AI & Machine Learning Enthusiast</h3>
-                <p>With expertise in AI/ML and data visualization, I develop intelligent systems to automate processes and enhance decision-making for businesses.</p>
+                <p>With expertise in AI/ML, I develop intelligent systems to automate processes and enhance decision-making for businesses.</p>
             </div>
         </div>
 
-        <div class="feature animate-fade-up" style="animation-delay: 0.4s">
+        <div class="feature">
             <div class="icon">🌍</div>
             <div class="content">
                 <h3>Global Thinker</h3>
-                <p>My diverse academic and professional background with Master of Science in Business Analytics from Northwood University (3.87 GPA) helps me approach problems with a global mindset, driving innovative and scalable solutions.</p>
+                <p>My diverse academic and professional background helps me approach problems with a global mindset, driving innovative and scalable solutions.</p>
             </div>
         </div>
 
-        <div class="feature animate-fade-up" style="animation-delay: 0.6s">
+        <div class="feature">
             <div class="icon">🎯</div>
             <div class="content">
                 <h3>Results-Oriented Leader</h3>
@@ -518,7 +518,7 @@ body {
         </div>
     </div>
 
-    <a href="#experience" class="cta-button animate-bounce">🚀 Learn About Me More</a>
+    <a href="#experience" class="cta-button">🚀 Learn About Me More</a>
 </section>
 
 <style>
@@ -613,219 +613,33 @@ body {
 </style>
 
 <script>
-    /* Typing Effect */
-    const text = "Harika, a Data Innovator!";
-    let i = 0;
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    }
-    window.onload = typeWriter;
-</script>
+  /**
+   * Typing Effect Function
+   * @param {string} text - The text to type.
+   * @param {string} elementId - The ID of the element where the text will appear.
+   * @param {number} speed - The typing speed in milliseconds (default: 100).
+   */
+  function typeWriter(text, elementId, speed = 100) {
+      let i = 0;
 
-<style>
-    /* Section Styling */
-    .about-section {
-        position: relative;
-        padding: 60px 20px;
-        background: linear-gradient(to bottom right, #a2f8c6, #ebd495);
-        text-align: center;
-        border-radius: 20px;
-        overflow: hidden;
-    }
+      // Function to write each character
+      function write() {
+          if (i < text.length) {
+              document.getElementById(elementId).innerHTML += text.charAt(i);
+              i++;
+              setTimeout(write, speed);
+          }
+      }
 
-    /* Profile Styling */
-    .profile-container {
-        margin-bottom: 40px;
-    }
+      // Start the typing effect
+      write();
+  }
 
-    .profile-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid #00a6ed;
-    }
-
-    .typing-text {
-        font-size: 2rem;
-        margin-top: 20px;
-        color: #333;
-        font-weight: bold;
-    }
-
-    /* Dots and Lines Background */
-    .background-pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    .dots {
-        position: absolute;
-        background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
-        background-size: 20px 20px;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-    }
-
-    .lines {
-        position: absolute;
-        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-    }
-
-    /* Features Section Styling */
-    .features-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 40px;
-    }
-
-    .feature {
-        display: flex;
-        align-items: center;
-        background: #ffffff;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .icon {
-        font-size: 3rem;
-        margin-right: 20px;
-        color: #00a6ed;
-    }
-
-    .content h3 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .content p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.5;
-    }
-
-    /* CTA Button */
-    .cta-button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 10px 20px;
-        background-color: #00a6ed;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: transform 0.3s ease, background 0.3s ease;
-        box-shadow: 0px 0px 15px rgba(0, 166, 237, 0.6);
-    }
-
-    .cta-button:hover {
-        background-color: #ffb400;
-        transform: scale(1.1);
-    }
-
-    /* Animations */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @keyframes fade-up {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes move-dots {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-200px);
-        }
-    }
-
-    @keyframes move-lines {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-150px);
-        }
-    }
-
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-5px);
-        }
-    }
-
-    .animate-float {
-        animation: float 4s infinite ease-in-out;
-    }
-
-    .animate-dots {
-        animation: move-dots 10s infinite linear;
-    }
-
-    .animate-lines {
-        animation: move-lines 12s infinite linear;
-    }
-
-    .animate-fade-up {
-        animation: fade-up 1s ease-in-out;
-    }
-
-    .animate-bounce {
-        animation: bounce 2s infinite;
-    }
-</style>
-
-<script>
-    /* Typing Effect */
-    const text = "Harika, a Data Innovator!";
-    let i = 0;
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    }
-    window.onload = typeWriter;
+  // Initialize typing effects when the page loads
+  window.addEventListener("load", () => {
+      typeWriter("Harika, a Data Innovator!", "typing", 100);
+      typeWriter("Welcome to my portfolio!", "typing2", 150); // Example for a second effect
+  });
 </script>
 
 
