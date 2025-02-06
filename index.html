@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harika Yenuga's Portfolio</title>
-   <style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -106,7 +106,7 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f4f7fb;
+  background-color: #f9ffff;
   color: #333;
 }
 
@@ -131,25 +131,6 @@ body {
   gap: 20px;
   margin-bottom: 30px;
 }
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-  transform: scale(1.1);
-}
-
 .section-title {
   font-size: 2rem;
   color: #2c3e50;
@@ -181,7 +162,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #b4acac;
+  background-color: #faf5f5;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -193,26 +174,6 @@ body {
   justify-items: center;
   gap: 10px;
   margin-bottom: 30px;
-}
-
-/* Profile container */
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 20%;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Section Title */
@@ -249,7 +210,7 @@ body {
 .card {
   width: 100%;
   max-width: 900px;
-  background-color: #c3bedd;
+  background-color: #cab5f1;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(248, 245, 245, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -326,11 +287,6 @@ html {
 @media (max-width: 768px) {
   .about-container {
     grid-template-columns: 1fr;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
   }
 
   .about-content {
@@ -455,7 +411,6 @@ body {
 }
   </style>
 </head>
-</head>
 <body>
   <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
     <div class="logo">
@@ -472,8 +427,8 @@ body {
       </ul>
     </nav>
   </header>
- 
-<section id="about" class="about-section">
+  
+  <section id="about-me-features" class="about-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <p class="section-intro">Welcome to my world! Here, you'll discover my journey, passions, and the skills that make me a data-driven storyteller, AI enthusiast, and lifelong learner. Let's dive in!</p>
@@ -678,14 +633,15 @@ body {
   });
 </script>
 
-<section id="professional-background" class="py-10" style="background: linear-gradient(135deg, #9090c4, #82e4df, #597392, #6b4148); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
+
+
+<section id="experience" class="py-10" style="background: linear-gradient(135deg, #05054e, #3131a0, #4a4a72, #000030); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
   <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-6" style="color: #0c0000; font-family: 'Merriweather', serif;">My Professional Experience</h2>
-    <p class="text-xl text-gray-200 text-center mb-4" style="font-style: italic; font-weight: 500; font-family: 'Merriweather', serif;"></p>
+    <h2 class="text-4xl font-bold text-center mb-6" style="color: #e7e6e6;">My Professional Experience</h2>
+    <p class="text-xl text-gray-200 text-center mb-4" style="font-style: italic; font-weight: 500;">
       Embarking on a journey of transforming data into actionable insights, automating workflows, and visualizing impactful stories. 
-      Here’s a glimpse of my professional milestones and contributions in the data realm.
+      Here’s a glimpse of my professional milestones and contributions in the data research world.
     </p>
-  </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Card 1 -->
       <div class="experience-card shadow-lg rounded-xl bg-white p-6">
@@ -744,7 +700,7 @@ body {
     }
 
     #experience {
-      background: linear-gradient(135deg, #2c3e50, #34495e, #4a69bd, #6a89cc);
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #596c83, #87b479);
       padding: 3rem 1rem;
       border-radius: 20px;
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
@@ -815,7 +771,7 @@ body {
 
     .highlight {
       font-weight: bold;
-      color: #140104;
+      color: #040e46;
     }
 
     @media (max-width: 768px) {
@@ -867,7 +823,7 @@ body {
       0% { color: #a8dadc; }
       25% { color: #f4a261; }
       50% { color: #3b2b01; }
-      75% { color: #21ad9d; }
+      75% { color: #377c74; }
       100% { color: #264653; }
     }
   </style>
@@ -1010,7 +966,6 @@ body {
     }
   </style>
 </section>
-
   <section id="skills">
     <section style="padding: 20px; text-align: center;">
       <h2 id="interactive-heading" style="cursor: pointer; margin-bottom: 20px;"></h2>
