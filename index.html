@@ -472,40 +472,257 @@ body {
       </ul>
     </nav>
   </header>
-  <section id="about" style="background: linear-gradient(135deg, #f6511d, #ffb400, #00a6ed, #7fb800, #0d2c54); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
-    <!-- Profile Image -->
-    <img src="harika_image.jpg" alt="Harika Yenuga" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
-    
-    <h2>Ready to Know Me?</h2>
-    <div class="about-content">
-      <!-- About Me Description -->
-      <div class="card-container">
-        <div class="card">
-          <div class="card-front">
-            <div class="about-me-section">
-              <h3>😎 Who Am I?</h3>
-              <p style="text-align: justify;">
-                Hey! I’m <strong>Harika</strong>—a <strong>Data Analyst</strong> and <strong>Business Analyst</strong> on a mission to transform messy data into clear, actionable insights that fuel smarter business decisions. Armed with a <strong>Master’s in Business Analytics</strong> from <strong>Northwood University</strong> (3.87 GPA, but who's counting? 😉), I’ve spent my career diving deep into <strong>AI</strong>, <strong>Machine Learning</strong>, and <strong>data visualization</strong> to make numbers not just speak, but <em>tell a story</em>. 📊✨
-              </p>
-            
-              <p style="text-align: justify;">
-                Beyond crunching numbers, I bridge the gap between <strong>business needs</strong> and <strong>data-driven solutions</strong>, ensuring every decision is powered by real, impactful insights. Whether it’s building <strong>stunning dashboards</strong>, automating <strong>reports</strong>, or presenting complex findings in a way that makes sense—my goal is simple: turning data into your competitive edge. 🚀
-              </p>
-            
-              <p style="text-align: justify;">
-                Oh, and did I mention? My work is being featured at <a href="https://www.airc.org/" target="_blank"><strong>IEEE AIRC 2025</strong></a> and <a href="https://www.fredonia.edu/academics/colleges-schools/school-business/iba-conference" target="_blank"><strong>IBAC 2025</strong></a>. 🏆 Recognizing potential is my thing—let’s see how we can leverage <strong>your</strong> data!
-              </p>
-            
-              <p style="text-align: justify;">
-                If you’re looking for someone who mixes <strong>data expertise</strong> with a strategic, business-first mindset—<strong>I’m your person</strong>. Let’s make your data work harder and smarter, together. 💡
-              </p>
-            </div>
-            
-        </div>
-      </div>
+  <section id="about-me-features" class="about-section relative">
+    <div class="profile-container">
+        <img src="harika_image.jpg" alt="Harika Yenuga" class="profile-img animate-float">
+        <h2 class="typing-text">👋 Hi, I'm <span id="typing"></span></h2>
     </div>
-  </section>
-  
+
+    <!-- Dots and Lines Background -->
+    <div class="background-pattern">
+        <div class="dots animate-dots"></div>
+        <div class="lines animate-lines"></div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature animate-fade-up">
+            <div class="icon">📊</div>
+            <div class="content">
+                <h3>Data-Driven Storyteller</h3>
+                <p>I specialize in uncovering actionable insights through data visualization, transforming complex numbers into meaningful business strategies with a touch of magic.</p>
+            </div>
+        </div>
+
+        <div class="feature animate-fade-up" style="animation-delay: 0.2s">
+            <div class="icon">🤖</div>
+            <div class="content">
+                <h3>AI & Machine Learning Enthusiast</h3>
+                <p>With expertise in AI/ML and data visualization, I develop intelligent systems to automate processes and enhance decision-making for businesses.</p>
+            </div>
+        </div>
+
+        <div class="feature animate-fade-up" style="animation-delay: 0.4s">
+            <div class="icon">🌍</div>
+            <div class="content">
+                <h3>Global Thinker</h3>
+                <p>My diverse academic and professional background with Master of Science in Business Analytics from Northwood University (3.87 GPA) helps me approach problems with a global mindset, driving innovative and scalable solutions.</p>
+            </div>
+        </div>
+
+        <div class="feature animate-fade-up" style="animation-delay: 0.6s">
+            <div class="icon">🎯</div>
+            <div class="content">
+                <h3>Results-Oriented Leader</h3>
+                <p>Whether in a team or independently, I focus on achieving tangible results while staying adaptable and collaborative.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#experience" class="cta-button animate-bounce">🚀 Learn About Me More</a>
+</section>
+
+<style>
+    /* Section Styling */
+    .about-section {
+        position: relative;
+        padding: 60px 20px;
+        background: linear-gradient(to bottom right, #a2f8c6, #ebd495);
+        text-align: center;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    /* Profile Styling */
+    .profile-container {
+        margin-bottom: 40px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #00a6ed;
+    }
+
+    .typing-text {
+        font-size: 2rem;
+        margin-top: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Dots and Lines Background */
+    .background-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .dots {
+        position: absolute;
+        background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    .lines {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    /* Features Section Styling */
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon {
+        font-size: 3rem;
+        margin-right: 20px;
+        color: #00a6ed;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: #00a6ed;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, background 0.3s ease;
+        box-shadow: 0px 0px 15px rgba(0, 166, 237, 0.6);
+    }
+
+    .cta-button:hover {
+        background-color: #ffb400;
+        transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes move-dots {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-200px);
+        }
+    }
+
+    @keyframes move-lines {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-150px);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .animate-float {
+        animation: float 4s infinite ease-in-out;
+    }
+
+    .animate-dots {
+        animation: move-dots 10s infinite linear;
+    }
+
+    .animate-lines {
+        animation: move-lines 12s infinite linear;
+    }
+
+    .animate-fade-up {
+        animation: fade-up 1s ease-in-out;
+    }
+
+    .animate-bounce {
+        animation: bounce 2s infinite;
+    }
+</style>
+
+<script>
+    /* Typing Effect */
+    const text = "Harika, a Data Innovator!";
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    window.onload = typeWriter;
+</script>
+
 <section id="experience" class="py-10" style="background: linear-gradient(135deg, #414170, #16213e, #597392, #e94560); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">    
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-6" style="color: #ebcbcb;">My Professional Experience</h2>
