@@ -522,6 +522,111 @@ body {
 </section>
 
 <style>
+    /* Dots and Lines Background */
+    .background-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .dots {
+        position: absolute;
+        background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    .lines {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    /* Features Section Styling */
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon {
+        font-size: 3rem;
+        margin-right: 20px;
+        color: #00a6ed;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: #00a6ed;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, background 0.3s ease;
+        box-shadow: 0px 0px 15px rgba(0, 166, 237, 0.6);
+    }
+
+    .cta-button:hover {
+        background-color: #ffb400;
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    /* Typing Effect */
+    const text = "Harika, a Data Innovator!";
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    window.onload = typeWriter;
+</script>
+
+<style>
     /* Section Styling */
     .about-section {
         position: relative;
@@ -712,16 +817,17 @@ body {
 <script>
     /* Typing Effect */
     const text = "Harika, a Data Innovator!";
-    let j = 0;
+    let i = 0;
     function typeWriter() {
-        if (j < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(j);
-            j++;
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
             setTimeout(typeWriter, 100);
         }
     }
     window.onload = typeWriter;
 </script>
+
 
 <section id="professional-background" class="py-10" style="background: linear-gradient(135deg, #9090c4, #82e4df, #597392, #6b4148); padding: 60px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); width: 100vw; margin-left: calc(-50vw + 50%);">
   <div class="container mx-auto px-6">
