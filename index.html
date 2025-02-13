@@ -18,7 +18,7 @@
 
     /* Header styles */
 header {
-  background-color: #4169E1; /* Royal Blue */
+  background-color: #002366; /* Dark Royal Blue */
   color: white;
   padding: 20px 10%;
   display: flex;
@@ -40,11 +40,12 @@ header {
     }
 
     /* Welcome note styling */
-    .logo h1 {
-      font-size: 1.5rem;
+     .logo h1 {
+      font-size: 2rem; /* Bold and large */
+      font-weight: 700;
       white-space: nowrap;
-      z-index: 1;
     }
+
 
     /* Navigation styling */
     nav ul {
@@ -57,14 +58,15 @@ header {
     nav ul li a {
       text-decoration: none;
       color: white;
-      font-size: 1rem;
-      transition: color 0.3s ease;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.2s ease;
     }
 
     nav ul li a:hover {
-      color: #ffb400; /* Hover effect: golden color */
+      color: #ffcc00; /* Golden hover effect */
+      transform: scale(1.1); /* Slight zoom effect */
     }
-
     /* About Section */
     #about-me-features {
       padding: 40px 10%;
@@ -102,7 +104,7 @@ header {
       font-size: 1.8rem;
     }
 
-    /* Responsive styles */
+     /* Responsive styles */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -116,11 +118,7 @@ header {
       }
 
       nav ul li a {
-        font-size: 1.2rem; /* Slightly larger font for smaller screens */
-      }
-
-      .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Larger font size for smaller devices */
       }
     }
 /* General Reset */
@@ -445,7 +443,7 @@ body {
  <header>
     <div class="background-pattern"></div>
     <div class="logo">
-      <h1>Welcome to My Portfolio</h1>
+      <h1>Welcome to My Portfolio TechSavys!!!</h1>
     </div>
     <nav>
       <ul>
