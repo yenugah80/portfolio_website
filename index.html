@@ -5,94 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harika Yenuga's Portfolio</title>
   <style>
+  /* Reset and basic styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #f4f4f4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-  header .logo h1 {
-    margin: 0;
-    white-space: nowrap;
-    font-size: 1.8rem;
-    color: #333;
-  }
+    /* Header styles */
+    header {
+      background-color: #005f99; /* Strong blue background */
+      color: white;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
+    /* Background pattern styles */
+    .background-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #ffffff40 1px, transparent 1px),
+                  linear-gradient(transparent, transparent 4px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
 
-  nav ul li {
-    margin-right: 20px;
-  }
+    /* Welcome note styling */
+    .logo h1 {
+      font-size: 1.5rem;
+      white-space: nowrap;
+      z-index: 1;
+    }
 
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+    /* Navigation styling */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      z-index: 1;
+    }
 
-  nav ul li a:hover {
-    color: #00a6ed;
-  }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
 
-  .about-section {
-    padding: 100px 20px 60px; /* Top padding ensures it doesn't overlap with the sticky header */
-    text-align: center;
-    background: linear-gradient(to bottom right, #a2f8c6, #ebd495);
-    border-radius: 20px;
-    margin: 20px;
-  }
+    nav ul li a:hover {
+      color: #ffb400; /* Hover effect: golden color */
+    }
 
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  .about-section p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-    section {
-      padding: 80px 20px;
+    /* About Section */
+    #about-me-features {
+      padding: 40px 10%;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    #about-me-features h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #about-me-features p {
+      font-size: 1.2rem;
+    }
+
+    /* Profile Section */
+    .profile-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      margin-bottom: 60px;
     }
 
-    h2 {
-      font-size: 2.5rem;
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
       margin-bottom: 20px;
-      color: #820bb9;
-      animation: fadeIn 1s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+    .typing-text h2 {
+      font-size: 1.8rem;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem; /* Slightly larger font for smaller screens */
+      }
+
+      .logo h1 {
+        font-size: 1.2rem;
+      }
     }
 /* General Reset */
 * {
@@ -276,63 +306,7 @@ body {
   outline: none;
   box-shadow: 0 0 5px rgba(224, 231, 236, 0.8);
 }
- /* Dots and Lines Background */
-  .background-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .dots {
-    position: absolute;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
-    background-size: 30px 30px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    animation: move-dots 10s infinite linear;
-  }
-
-  .lines {
-    position: absolute;
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    animation: move-lines 15s infinite linear;
-  }
-
-  /* Keyframes for animations */
-  @keyframes move-dots {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-200px);
-    }
-  }
-
-  @keyframes move-lines {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-150px);
-    }
-  }
-
-  /* Add some container for content */
-  .container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 50px;
-  }
+ 
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
@@ -469,15 +443,11 @@ body {
 </head>
 <body>
   <!-- Header Section -->
-  <header>
+ <header>
+    <div class="background-pattern"></div>
     <div class="logo">
-      <div class="background-pattern">
-  <div class="dots"></div>
-  <div class="lines"></div>
-</div>
-  <div class="container">
-  <h1>Welcome to My Portfolio</h1>
-</div>
+      <h1>Welcome to My Portfolio</h1>
+    </div>
     <nav>
       <ul>
         <li><a href="#about-me-features">About Me</a></li>
@@ -494,10 +464,9 @@ body {
   <section id="about-me-features" class="about-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="section-intro">Your journey starts here with a touch of style and elegance
-! Where, you'll discover my journey, passions, and the skills that make me a data-driven storyteller, AI enthusiast, and lifelong learner. Let's dive in!</p>
+      <p class="section-intro">Your journey starts here with a touch of style and elegance! Where, you'll discover my journey, passions, and the skills that make me a data-driven storyteller, AI enthusiast, and lifelong learner. Let's dive in!</p>
     </div>
- <!-- Profile Section -->
+    <!-- Profile Section -->
     <div class="profile-container">
         <img src="harika_image.jpg" alt="Harika Yenuga" class="profile-img">
         <h2 class="typing-text">👋 Hi, I'm <span id="typing"></span></h2>
