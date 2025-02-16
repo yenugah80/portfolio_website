@@ -324,7 +324,7 @@ body {
 </head>
 <body>
   <!-- Header Section -->
- <header>
+<header class="header-center">
     <div class="background-pattern"></div>
     <div class="logo">
       <h1>Welcome to My Portfolio TechSavys!!!</h1>
@@ -352,43 +352,50 @@ body {
       font-family: Arial, sans-serif;
     }
 
- /* Header styles */
-header {
-  background-color: #002366; /* Dark Royal Blue */
-  color: white;
-  padding: 20px 10%;
+  /* Header styles */
+    header {
+      background-color: #002366; /* Dark Royal Blue */
+      color: white;
+      padding: 20px 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: flex;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Background pattern styles */
+    .background-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #ffffff40 1px, transparent 1px),
+                  linear-gradient(transparent, transparent 4px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+
+.header-center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; /* Corrected from 'flex' to 'center' */
-  position: relative;
-  z-index: 2;
+  text-align: center;
 }
 
-/* Background pattern styles */
-.background-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, #ffffff40 1px, transparent 1px),
-              linear-gradient(transparent, transparent 4px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-header .logo {
+.header-center .logo {
   margin-bottom: 20px; /* Adjust as needed */
 }
 
-header nav ul {
+.header-center nav ul {
   display: flex;
   justify-content: center;
   gap: 20px; /* Adjust as needed */
 }
-
     /* Welcome note styling */
     .logo h1 {
       font-size: 2rem;
